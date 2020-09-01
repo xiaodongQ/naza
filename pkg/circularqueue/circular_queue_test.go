@@ -9,6 +9,7 @@
 package circularqueue_test
 
 import (
+	"log"
 	"testing"
 
 	"github.com/q191201771/naza/pkg/assert"
@@ -29,6 +30,7 @@ func TestCircularQueue(t *testing.T) {
 	// empty
 	_, err = q.PopFront()
 	assert.IsNotNil(t, err)
+	log.Println(err)
 	_, err = q.Front()
 	assert.IsNotNil(t, err)
 	_, err = q.Back()
